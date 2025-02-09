@@ -78,7 +78,7 @@ export default function CustomerCarousel(){
 
     return (
         <div className="w-screen px-8 sm:px-40">
-            <div className={cn("swiper swiper-transition", "w-full h-[140px] sm:h-[200px]")}>
+            <div className={cn("swiper swiper-transition", "w-full h-[140px] sm:h-[120px]")}>
                 <div className="swiper-wrapper">
                     {groupedCustomers.map((group, index) => (
                         <React.Fragment key={`group-customers-${index}`}>

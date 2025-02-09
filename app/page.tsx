@@ -77,11 +77,18 @@ export default function Home() {
                   </div>
               </div>
 
+              {/* Our customers */}
+              <div id="customers" className="mt-8 px-8 sm:px-16 w-full">
+                  <h3 className="text-xl font-bold mb-8">Alcuni dei nostri clienti</h3>
+                  <div className="flex flex-wrap gap-6 justify-center">
+                      <CustomerCarousel />
+                  </div>
+              </div>
 
               <div id="who-we-are" className="mt-4 sm:mt-0 px-8 sm:px-16 grid grid-cols-12">
                   {/* Who we are */}
                   <div className="col-span-12">
-                      <h3 className="text-5xl font-bold mb-8">Chi siamo</h3>
+                      <h3 className="text-5xl font-bold sm:mt-4 mb-8">Chi siamo</h3>
                       <p className="text-gray-600 text-lg leading-[40px]">
                           Cerchi un servizio di ritiro e consegna dedicato professionale, sicuro e su misura? <b>Battista
                           Trasporti s.a.s.</b> è il tuo partner ideale per spedizioni rapide, precise e personalizzate.
@@ -96,7 +103,7 @@ export default function Home() {
                           width={0}
                           height={0}
                           sizes="100vw"
-                          className="w-full h-auto"
+                          className="w-full sm:w-[70%] m-auto h-auto"
                       />
                       <p className="mt-8 text-gray-600 text-lg leading-[40px]">
                           Specializzati in <b>trasporti dedicati</b> per aziende di ogni settore, offriamo servizi
@@ -106,14 +113,6 @@ export default function Home() {
                           suo team. Richiedi subito un preventivo personalizzato: la tua soddisfazione è il nostro
                           obiettivo!
                       </p>
-                  </div>
-              </div>
-
-              {/* Our customers */}
-              <div id="customers" className="mt-8 px-8 sm:px-16 w-full">
-                  <h3 className="text-5xl font-bold mb-8">Alcuni dei nostri clienti</h3>
-                  <div className="flex flex-wrap gap-6 justify-center">
-                      <CustomerCarousel />
                   </div>
               </div>
 
@@ -169,7 +168,7 @@ export default function Home() {
 
               {/* Special services */}
               <div className="mt-8 px-8 sm:px-12 sm:grid sm:grid-cols-12 gap-8">
-                  <div className="col-span-12 sm:col-span-7">
+                  <div className="col-span-12 sm:col-span-6">
                       <h3 className="text-5xl font-bold mb-8">Servizi speciali</h3>
                       <p className="text-gray-600 text-lg leading-[40px]">
                           Offriamo una vasta gamma di servizi speciali, progettati per rispondere alle esigenze più
@@ -178,14 +177,10 @@ export default function Home() {
                           garantiamo soluzioni logistiche efficienti e sicure. I nostri servizi includono:
                       </p>
                       <ul className="p-4 list-disc">
-                          <li className="text-gray-600">
-                              <p className="italic font-bold">Trasporti con bilici e mezzi pesanti:</p> ideali per
-                              gestire carichi di grandi dimensioni e volumi elevati, assicurando puntualità e affidabilità.
-                          </li>
                           <li className="text-gray-600 mt-2">
-                              <p className="italic font-bold">Furgoni dotati di termoregistratori:</p> perfetti
-                              per il trasporto sicuro a temperatura controllata fino a -20°C di alimenti, farmaci e altri prodotti
-                              deperibili. Manteniamo la catena del freddo intatta durante ogni spostamento.
+                              <p className="font-bold">Trasporto merci delicate:</p> soluzioni dedicate per beni
+                              fragili o di alto valore, con un
+                              trattamento personalizzato per ogni esigenza.
                           </li>
                           <li className="text-gray-600 mt-2">
                               <p className="font-bold">Assistenza tecnica al carico e scarico:</p> supporto
@@ -193,22 +188,23 @@ export default function Home() {
                               cura e sicurezza in ogni fase del trasporto, riducendo al minimo il rischio di danni.
                           </li>
                           <li className="text-gray-600 mt-2">
-                              <p className="font-bold">Trasporto merci delicate:</p> soluzioni dedicate per beni
-                              fragili o di alto valore, con un
-                              trattamento personalizzato per ogni esigenza.
+                              <p className="italic font-bold">Furgoni dotati di termoregistratori:</p> perfetti
+                              per il trasporto sicuro a temperatura controllata fino a -20°C di alimenti, farmaci e
+                              altri prodotti
+                              deperibili. Manteniamo la catena del freddo intatta durante ogni spostamento.
                           </li>
                       </ul>
 
-                      <p>Con Battista Trasporti, ogni carico è in mani sicure! 🚛</p>
+                      <p>Con Battista Trasporti, ogni carico è in mani sicure!</p>
                   </div>
-                  <div className="hidden sm:flex sm:col-span-5 justify-center">
+                  <div className="mt-8 sm:mt-0 sm:flex sm:col-span-6 justify-center">
                       <Image
                           src="/battista_servizi_speciali.png"
                           alt="Battista servizi speciali"
                           width={0}
                           height={0}
                           sizes="100vw"
-                          className="sm:mt-12 rounded-2xl w-auto h-auto max-h-[440px]"
+                          className="sm:mt-20 rounded-2xl w-auto h-auto max-h-[440px]"
                           priority
                       />
                   </div>

@@ -45,7 +45,7 @@ export default function DedicatedTransportPage() {
                               progettato per rispondere alle esigenze specifiche di ogni cliente. Questo approccio è
                               particolarmente utile per chi ha necessità particolari, come:
                               <ul className="p-4 list-disc">
-                                  <li>Trasporti speciali: movimentazione di carichi pesanti, voluminosi o fragili.</li>
+                                  <li>Trasporti speciali: movimentazione di carichi fragili o preziosi.</li>
                                   <li>Trasporti a temperatura controllata: gestione della catena del freddo per alimenti,
                                       farmaci e altri prodotti deperibili.
                                   </li>
@@ -57,13 +57,13 @@ export default function DedicatedTransportPage() {
                       </div>
                       <div className="col-span-12 sm:col-span-4 flex justify-center">
                           <Image
-                              src="/servizi/trasporti-su-misura.jpg"
+                              src="/servizi/trasporti-su-misura.png"
                               alt="Battista Trasporti su misura"
                               width={0}
                               height={0}
                               priority
                               sizes="100vw"
-                              className="mt-2 rounded-md max-w-[390px] w-full h-auto"
+                              className="mt-2 rounded-md w-full h-auto"
                           />
                       </div>
                   </div>
@@ -84,9 +84,9 @@ export default function DedicatedTransportPage() {
                       La nostra flotta include veicoli di ultima generazione, progettati per gestire ogni tipo di
                       trasporto:
                       <ul className="p-4 list-disc">
-                          <li>🚛 Bilici e mezzi pesanti per carichi di grandi dimensioni.</li>
-                          <li>❄️ Furgoni refrigerati per trasporti a temperature fino a -20°C.</li>
                           <li>🚚 Veicoli dedicati per trasporti fragili o di alto valore.</li>
+                          <li>📦 Van e furgoni per consegne rapide e flessibili.</li>
+                          <li>❄️ Furgoni refrigerati per trasporti a temperature fino a -20°C.</li>
                       </ul>
                   </div>
 
