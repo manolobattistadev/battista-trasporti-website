@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import {Roboto} from "next/font/google";
 import "./globals.css";
-import { GoogleTagManager } from '@next/third-parties/google'
 import { ToastContainer, Bounce } from "react-toastify";
 import StructuredData from "@/components/structured-data";
+import {GoogleTagManagerBodyScript, GoogleTagManagerHeadScript} from "@/components/google-tag-manager";
 
 const robotoSans = Roboto({
     subsets: ['latin'],
@@ -23,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+    const gtmId = "GTM-MMGHRDK8";
   return (
     <html lang="it">
     <head>
@@ -46,24 +47,25 @@ export default function RootLayout({
         <meta name="twitter:description" content={description}/>
         <meta name="twitter:image" content="https://battistatrasporti.it/logo.png"/>
         <StructuredData description={description}/>
+        <GoogleTagManagerHeadScript gtmId={gtmId} strategy="afterInteractive" />
     </head>
     <body className={`${robotoSans.variable} ${robotoSans.variable} antialiased`}>
-    {children}
-    <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        transition={Bounce}
-    />
+        <GoogleTagManagerBodyScript gtmId={gtmId} />
+        {children}
+        <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition={Bounce}
+        />
     </body>
-    <GoogleTagManager gtmId="GTM-MMGHRDK8" />
     </html>
   );
 }
